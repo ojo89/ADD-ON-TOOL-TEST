@@ -1,35 +1,18 @@
 import React from 'react';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 class List extends React.Component {
     render() {
         return (
-            <div>
-                <ListProfile id={this.props.id} name={this.props.name}/>
-                <ListInfo password={this.props.password} email={this.props.email} gender={this.props.gender} job={this.props.job}/>
-            </div>
-        )
-    }
-}
-
-class ListProfile extends React.Component {
-    render() {
-        return (
-            <div>
-                <h2>{this.props.name}({this.props.id})</h2>
-            </div>
-        )
-        }
-}
-    
-class ListInfo extends React.Component {
-    render() {
-        return (
-            <div>
-                <p>{this.props.password}</p>
-                <p>{this.props.birthday}</p>
-                <p>{this.props.gender}</p>
-                <p>{this.props.job}</p>
-            </div>
+            <TableRow>
+                <TableCell>{this.props.id}</TableCell>
+                <TableCell>{this.props.password}</TableCell>
+                <TableCell>{this.props.name}</TableCell>
+                <TableCell>{this.props.email}</TableCell>
+                <TableCell>{this.props.gender}</TableCell>
+                <TableCell>{this.props.job}</TableCell>
+            </TableRow>
         )
     }
 }
